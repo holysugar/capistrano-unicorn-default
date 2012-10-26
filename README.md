@@ -1,9 +1,9 @@
 # Capistrano::Unicorn::Default
 
 ```ruby
-  alias_task "deploy:start"  , "unicorn:start"
-  alias_task "deploy:stop"   , "unicorn:stop"
-  alias_task "deploy:restart", "unicorn:reload"
+  deploy:start   -> unicorn:start
+  deploy:stop    -> unicorn:stop
+  deploy:restart -> unicorn:restart
 ```
 
 ## Installation
