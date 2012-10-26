@@ -1,6 +1,10 @@
 # Capistrano::Unicorn::Default
 
-TODO: Write a gem description
+```ruby
+  alias_task "deploy:start"  , "unicorn:start"
+  alias_task "deploy:stop"   , "unicorn:stop"
+  alias_task "deploy:restart", "unicorn:reload"
+```
 
 ## Installation
 
@@ -18,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+require in your config/deploy.rb
+
+```ruby
+require 'capistrano-unicorn-default'
+```
 
 ## Contributing
 

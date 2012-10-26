@@ -7,8 +7,8 @@ configuration = Capistrano::Configuration.respond_to?(:instance) ?
 
 configuration.load do
 
-  alias_task "deploy:start", "unicorn:start"
-  alias_task "deploy:stop", "unicorn:stop"
+  alias_task "deploy:start"  , "unicorn:start"
+  alias_task "deploy:stop"   , "unicorn:stop"
   alias_task "deploy:restart", "unicorn:reload"
 
 end
